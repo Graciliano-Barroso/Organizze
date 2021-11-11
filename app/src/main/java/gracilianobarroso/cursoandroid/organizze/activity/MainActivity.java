@@ -1,13 +1,11 @@
-package gracilianobarroso.cursoandroid.organizze;
+package gracilianobarroso.cursoandroid.organizze.activity;
 
 import android.content.Intent;
 import android.view.View;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
-import gracilianobarroso.cursoandroid.organizze.activity.CadastroActivity;
-import gracilianobarroso.cursoandroid.organizze.activity.LoginActivity;
+import gracilianobarroso.cursoandroid.organizze.R;
 
 public class MainActivity extends IntroActivity {
 

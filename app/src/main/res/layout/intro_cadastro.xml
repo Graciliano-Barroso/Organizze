@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
             android:text="Crie sua conta grátis"
@@ -18,22 +19,26 @@
             android:layout_marginBottom="8dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
     <TextView
-            android:text="Junte-se a mais de meio milhão  \n de pessoas e comece agora"
+            android:text="Junte-se a mais de meio milhão de pessoas e comece agora"
             android:textColor="#9C9C9C"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:layout_constraintBottom_toTopOf="@+id/button" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" android:gravity="center"/>
     <androidx.appcompat.widget.AppCompatButton
             android:text="Cadastre-se"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/button"
             tools:ignore="MissingConstraints" app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintBottom_toTopOf="@+id/textView5" android:layout_marginTop="32dp"
             android:layout_marginBottom="8dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:onClick="btCadastrar"/>
+            app:layout_constraintStart_toStartOf="parent" android:onClick="btCadastrar"
+            android:layout_marginRight="32dp" android:layout_marginEnd="32dp" android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:background="@color/purple_500"
+            android:textColor="@color/white"/>
     <TextView
             android:text="Já tenho uma conta"
             android:textColor="#9C9C9C"
