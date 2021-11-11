@@ -3,11 +3,15 @@ package gracilianobarroso.cursoandroid.organizze.activity;
 import android.content.Intent;
 import android.view.View;
 import android.os.Bundle;
+import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 import gracilianobarroso.cursoandroid.organizze.R;
+import gracilianobarroso.cursoandroid.organizze.config.ConfiguracaoFirebase;
 
 public class MainActivity extends IntroActivity {
+
+    private FirebaseAuth autenticacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,13 @@ public class MainActivity extends IntroActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        verificarUsuarioLogado();
+
+    }
+
     public void btEntrar(View view){
         startActivity(new Intent(this, LoginActivity.class));
 
@@ -53,6 +64,18 @@ public class MainActivity extends IntroActivity {
     public void btCadastrar(View view){
         startActivity(new Intent(this, CadastroActivity.class));
 
+    }
+
+    public void verificarUsuarioLogado(){
+        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        if(autenticacao.getCurrentUser() != null){
+            abrirTelaPrincipal();
+        }
+
+    }
+
+    public void abrirTelaPrincipal(){
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 
 }
