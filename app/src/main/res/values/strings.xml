@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Organizze</string>
+    <string name="intro1text_um">Organize suas contas de onde estiver</string>
+    <string name="intro1_text_do_is">Simples e facil de usar e grátis</string>
+    <string name="imagem_um">imagemum</string>
 </resources>
